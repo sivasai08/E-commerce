@@ -1,0 +1,122 @@
+/* Remove margin and padding from the body and the outermost containers */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Container for the card list */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #3b0133; /* Light pink background for the page */
+}
+
+/* Individual card styling */
+.card {
+  width: 18rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  background-color: #800080; /* Purple card background */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+  /* Hover effect for the card */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+/* Image styling for the card */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #fff; /* White border under the image */
+}
+
+/* Title styling */
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Text styling for product description */
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Card body padding */
+.card-body {
+  padding: 16px;
+}
+
+/* Styling for the Add to Cart button */
+.btn-primary {
+  background-color: #ff66b2;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+  /* Hover effect for the Add to Cart button */
+  .btn-primary:hover {
+    background-color: #ff3385;
+  }
+
+/* Styling for the search input */
+.input-group {
+  
+  max-width: 600px; /* Limit the max-width */
+  margin: 0 auto; /* Center the input group */
+  padding: 20px 0; /* Remove padding */
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+}
+
+  .input-group input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    width: 100%; /* Take up full width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    transition: border-color 0.3s ease;
+  }
+
+    .input-group input:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+  .input-group button {
+    border-radius: 25px;
+    margin-left: 10px;
+    padding: 10px 15px;
+    background-color: #ff9900;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+    .input-group button:hover {
+      background-color: #e68900;
+    }
+.search-bar-wrapper {
+  background-color: #3b0133; /* Same as card-container */
+  padding: 0;
+  margin: 0;
+}

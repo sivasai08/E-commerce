@@ -1,0 +1,222 @@
+*{
+    background-color:#3b0133;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #3b0133;
+  align-items:flex-start;
+
+}
+
+.card {
+  width: 18rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  background-color: #800080; /* purple card background */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #fff;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.btn-primary {
+  background-color: #ff66b2;
+  border: none;
+}
+
+  .btn-primary:hover {
+    background-color: #ff3385;
+  }
+.empty-cart {
+  text-align: center;
+  margin-top: 0;
+  padding: 20px;
+}
+
+.empty-img {
+  width: 150px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.empty-text {
+  font-size: 1.5rem;
+  color: #777;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Remove unwanted margin/padding from body and page */
+:host {
+  display: block;
+  background-color: #3b0133; /* match your dark purple theme */
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+/* Optional: remove margin on body if it's affecting layout */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Cart heading styling */
+.cartheading {
+  text-align: center;
+  font-size: 2rem;
+  color: #ffccff;
+  padding-top:30px;
+  font-weight: bold;
+  padding-bottom:10px;
+}
+.card {
+  animation: fadeInUp 0.4s ease-in;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn-primary {
+  background-color: #ff66b2;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+.checkout-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.checkout-btn {
+  background: linear-gradient(to right, #ff66b2, #cc00cc);
+  color: white;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+  .checkout-btn:hover {
+    background: linear-gradient(to right, #ff3399, #990099);
+    transform: scale(1.05);
+  }
+/* Blur background when modal is open */
+body.modal-open .blur-on-modal {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+.modal-content {
+  
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #990099;
+}
+
+.modal-body {
+  
+  border-radius: 12px;
+  
+  backdrop-filter: blur(10px);
+  color: #f0f0f0;
+}
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 1rem;
+  color: #f9f9f9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.checkout-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 12px;
+  color: #ff66cc;
+}
+
+.total-amount {
+  color: #ff33cc;
+}
+
+
+
+
+.modal-footer .btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.modal-footer .btn-primary {
+  background-color: #cc00cc;
+  border: none;
+}
+
+  .modal-footer .btn-primary:hover {
+    background-color: #990099;
+  }
+
+.modal-footer .btn-secondary {
+  background-color: #aaa;
+  border: none;
+}
+
+  .modal-footer .btn-secondary:hover {
+    background-color: #888;
+  }

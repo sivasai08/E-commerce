@@ -1,0 +1,58 @@
+<div class="blur-on-modal">
+<p class="cartheading">Your Cart</p>
+<div *ngIf="cartItems.length > 0">
+  <div class="checkout-container" *ngIf="cartItems.length > 0">
+    <!----<button class="checkout-btn" (click)="checkout()">Proceed to Checkout</button>-->
+    <button type="button" class=" checkout-btn" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="checkout()">Proceed to Checkout</button>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Checkout</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div *ngFor="let item of cartItems" class="checkout-item">
+            <span class="item-name">{{ item.productName }}</span>
+            <span class="item-price">₹{{ item.productPrice }}</span>
+          </div>
+          <hr />
+          <div class="checkout-total">
+            <span>Total:</span>
+            <span class="total-amount">₹{{ totalPrice }}</span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Pay</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!---cart with items-->
+  <div class="card-container">
+    <div *ngFor="let data of cartItems; index as i" class="card">
+      <img [src]="data.productImageUrl" class="card-img-top" alt="Product image">
+      <div class="card-body">
+        <h5 class="card-title">{{ data.productName }}</h5>
+        <p class="card-text">
+          <strong>Price:</strong> ₹{{ data.productPrice }} <br>
+          <strong>Description:</strong> {{ data.productDescription }}
+        </p>
+        <a class="btn btn-primary" (click)="deletedata(data)">Remove</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 🧸 Empty Cart Styling -->
+<div *ngIf="cartItems.length === 0" class="empty-cart">
+  <img src="https://cdn-icons-png.flaticon.com/512/2038/2038854.png" alt="Empty Cart" class="empty-img">
+  <p class="empty-text">Your cart is currently empty. 🛒</p>
+</div>
+</div>

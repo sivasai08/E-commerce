@@ -1,0 +1,18 @@
+*{
+    padding:0;
+    background-color:#fb85ea;
+    height:50px;
+
+}
+.navbar-brand{
+    font-size:30px;
+    margin-left:20px;
+}
+a{
+    padding-right:25px;
+    color:#3b0133;
+   text-decoration:none;
+}
+.links{
+    padding-top:13px;
+}

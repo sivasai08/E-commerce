@@ -1,0 +1,14 @@
+
+<div class="card-container">
+  <div *ngFor="let data of ProductsList; index as i" class="card">
+    <img src={{data.productImageUrl}} class="card-img-top" alt="Product image">
+    <div class="card-body">
+      <h5 class="card-title">{{ data.productName }}</h5>
+      <p class="card-text">
+        <strong>Price:</strong> ₹{{ data.productPrice }} <br>
+        <strong>Description:</strong> {{ data.productDescription }}
+      </p>
+      <a  class="btn btn-primary"(click)="senddata(data)">AddToCart</a>
+    </div>
+  </div>
+</div>

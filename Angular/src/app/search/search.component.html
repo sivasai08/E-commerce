@@ -1,0 +1,31 @@
+<div class="search-bar-wrapper">
+  <!-- Search Bar Section -->
+  <div class="input-group my-3">
+    <input type="text"class="form-control"[(ngModel)]="inputs"placeholder="Search Products" />
+  </div>
+
+<!-- Product Cards Section -->
+  <div class="card-container">
+  <!-- Only show products if there's input and they match -->
+    <ng-container *ngFor="let product of ProductsList; index as i">
+      <div *ngIf="inputs.trim() !== '' && matchesSearch(product)" class="card">
+        <img [src]="product.productImageUrl"
+           class="card-img-top"
+           alt="Product image" />
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">
+            <strong>Price:</strong> ₹{{ product.productPrice }} <br />
+            <strong>Description:</strong> {{ product.productDescription }}
+          </p>
+          <button class="btn btn-primary" (click)="senddata(product)">Add To Cart</button>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+
+
+
+
+

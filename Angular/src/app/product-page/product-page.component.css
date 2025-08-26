@@ -1,0 +1,53 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #3b0133; /* light pink background for the page */
+}
+
+.card {
+  width: 18rem;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  background-color: #800080; /* purple card background */
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #fff;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  padding: 16px;
+  
+}
+
+.btn-primary {
+  background-color: #ff66b2;
+  border: none;
+}
+
+  .btn-primary:hover {
+    background-color: #ff3385;
+  }

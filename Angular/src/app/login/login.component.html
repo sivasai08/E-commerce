@@ -1,0 +1,30 @@
+<div class="login-container-parent">
+<div class="login-container">
+  <h2>{{ isRegistering ? 'Register' : 'Login' }}</h2>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm">
+    <!-- Register form -->
+    <div *ngIf="isRegistering">
+      <input type="text" name="username" [(ngModel)]="username" placeholder="Username" required />
+    </div>
+
+    <input type="email" name="email" [(ngModel)]="email" placeholder="Email" required />
+    <input type="password" name="password" [(ngModel)]="password" placeholder="Password" required />
+
+    <button type="submit" [disabled]="form.invalid">
+      {{ isRegistering ? 'Register' : 'Login' }}
+    </button>
+  </form>
+
+  <p *ngIf="message" [ngClass]="{ 'error': isError, 'success': !isError }">
+    {{ message }}
+  </p>
+
+  <!-- Switch between login/register -->
+  <p class="toggle-link">
+    <a (click)="toggleMode()" >
+      {{ isRegistering ? 'Already have an account? Login' : 'Don’t have an account? Register' }}
+    </a>
+  </p>
+</div>
+</div>

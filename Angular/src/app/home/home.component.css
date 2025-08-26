@@ -1,0 +1,11 @@
+.rounded{
+    height:500px;
+    z-index:-1;
+}
+
+.slogan{
+    color:#f7e7cb;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:30px;
+    margin-top:-40px;
+}
